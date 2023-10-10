@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="get Records of diff.objs">
+
+        <div class="slds-p-around_small">
+            <template lwc:if={outputs}>
+                <template for:each={outputs.results} for:item="currItem">
+                    <p key={currItem.result.Id}>{currItem.result.fields.Name.value}
+                    </p>
+                </template>
+
+            </template>
+        </div>
+        <!--{currItem.result.Id}>{currItem.result.fields.Name.value}s
+            <div class="slds-p-around_small">
+            <p>Account Name:{accName}</p>
+            <p>account Rating: {accRating}</p>
+            <p>Account Name2:{accName2}</p>
+            <p>Contact Name: {conName}</p>
+        </div>-->
+    </lightning-card>
+</template>

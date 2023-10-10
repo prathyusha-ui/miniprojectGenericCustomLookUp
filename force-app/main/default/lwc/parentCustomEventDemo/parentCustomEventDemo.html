@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Child to Parent Communication-Using Custom Events">
+        <template lwc:if={displayMsg}>
+            <p class="slds-var-p-around_small"> welcome</p>
+        </template>
+
+        <div class="slds-var-p-around_small">
+            <c-child-custom-event-demo oncustommsg={childResponseHandler}></c-child-custom-event-demo>
+        </div>
+    </lightning-card>
+
+
+
+</template>

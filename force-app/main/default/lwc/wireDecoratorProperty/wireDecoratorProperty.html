@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="get Account Records with Wire">
+        <template lwc:if={accRecords.data}>
+            <div style="height: 300px;">
+                <lightning-datatable key-field="id" data={accRecords.data} columns={columns}>
+                </lightning-datatable>
+            </div>
+
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent component-Displaying Contact List" icon-name="custom:custom25">
+        <lightning-layout class="slds-var-m-around_medium">
+            <lightning-layout-item>
+                <template lwc:if={wiredContacts.data}>
+                    <template for:each={wiredContacts.data} for:item="contact">
+                        <c-contactitem contact={contact} key={contact.Id}></c-contactitem>
+                    </template>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

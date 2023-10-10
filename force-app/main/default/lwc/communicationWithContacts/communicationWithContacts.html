@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Parent component-Displaying Contact List" icon-name="custom:custom25">
+        <lightning-layout class="slds-var-m-around_medium">
+            <lightning-layout-item>
+                <template lwc:if={wiredContacts.data}>
+                    <template for:each={wiredContacts.data} for:item="contact">
+                        <c-contactitem contact={contact} key={contact.Id}
+                            onselection={childResponseSelectionHandler}></c-contactitem>
+                    </template>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-around_small">
+                <template lwc:if={selectedContact}>
+                    <img src={selectedContact.PhotoUrl} />
+                    <p>{selectedContact.Name}</p>
+                    <p>{selectedContact.Title}</p>
+                    <p> <lightning-formatted-phone value={selectedContact.Phone}></lightning-formatted-phone></p>
+                    <p><lightning-formatted-email value={selectedContact.Email}></lightning-formatted-email></p>
+                </template>
+
+                <template lwc:else>
+                    <!--
+                    <p>Function is not working</p>
+                   -->
+                </template>
+
+
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

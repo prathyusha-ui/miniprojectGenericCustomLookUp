@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="get All Pick list Fields of an Object">
+        <div class="slds-var-p-around_small">
+            <p>Some</p>
+            <template lwc:if={feilds.data}>
+                <lightning-combobox name="Process" label="Industry" placeholder="Select Industry"
+                    options={feilds.data.picklistFieldValues.Industry.values} class="slds-var-p-around_small">
+                </lightning-combobox>
+
+                <lightning-combobox name="Rating" label="Rating" placeholder="Select Rating"
+                    options={feilds.data.picklistFieldValues.Rating.values} class="slds-var-p-around_small">
+                </lightning-combobox>
+
+                <lightning-combobox name="active" label="Active" placeholder="Is Active"
+                    options={feilds.data.picklistFieldValues.Active__c.values} class="slds-var-p-around_small">
+                </lightning-combobox>
+
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="get PickList values of field of Default RecordType" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <template lwc:if={recordType.data}>
+                <lightning-combobox name="Progress" label="Industry" value={value} placeholder="Select Industry"
+                    options={recordType.data.values} onchange={handleChange} class="slds-var-p-around_small">
+
+                </lightning-combobox>
+                <!-- <p>Pick List values of Industry field::</p>
+                    <template for:each={accIndusttryPickListInfo.values} for:item="currItem">
+                        <p key={currItem.label}>{currItem.value}</p>
+                    </template>-->
+            </template>
+            <p>Selected value is::{value}</p>
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card class="slds-page-header" title="Display FullName" icon-name="custom:custom20">
+        <h2 class="slds-p-left_xxx-small">Please Enter below details::</h2>
+        <div class="slds-p-around_small">
+            <lightning-input name="FirstName" label="Enter First Name" onchange={changeHandler}></lightning-input>
+            <lightning-input name="LastName" label="Enter Last Name" onchange={changeHandler}></lightning-input>
+        </div>
+        <div class="slds-p-around_small">
+           Full Name::<lightning-formatted-text value={fullName}></lightning-formatted-text> <br><br/>
+        
+            Full Name with Caps::{fullNamewithCaps}
+            
+        </div>
+    </lightning-card>
+</template>

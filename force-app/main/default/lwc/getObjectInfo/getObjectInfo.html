@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="get object information">
+
+        <template lwc:if={accInfo}>
+            <div class="slds-var-p-around_small">
+                <p>object information::{accInfo.apiName}</p>
+            </div>
+
+            <div class="slds-var-p-around_small">
+                <p>Child Relations of Account</p>
+                <template for:each={accInfo.childRelationships} for:item="currItem">
+                    <p key={currItem.childObjectApiName}>{currItem.childObjectApiName}</p>
+                </template>
+            </div>
+        </template>
+        <template lwc:elseif={accError}>
+
+        </template>
+    </lightning-card>
+</template>
