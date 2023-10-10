@@ -16,8 +16,8 @@ export default class MiniCustomLookup extends LightningElement {
     displayOptions = false;
 
     get isRecordSelected() {
-        console.log("isRecordSelected",this.selectedRecord.selectdId =="" ? false : true);
-        return this.selectedRecord.selectdId == "" ? false : true;
+        console.log("isRecordSelected",this.selectedRecord.selectdId ==="" ? false : true);
+        return this.selectedRecord.selectdId === "" ? false : true;
     }
     @wire(searchRecords, {objApiName : "$apiName", searchKey :"$searchValue" })
     outputs;/*outputsFunction(data,error){
