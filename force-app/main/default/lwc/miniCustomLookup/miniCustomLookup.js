@@ -46,9 +46,9 @@ export default class MiniCustomLookup extends LightningElement {
     clickHandler(event) {
         let selectedId = event.currentTarget.dataset.item;
         console.log("SelectedId", selectedId);
-        let outputRecord = this.outputs.data.find((currItem) => {
+        let outputRecord = this.outputs.data.find((currItem) => 
             currItem.Id == selectedId
-        });
+        );
         this.selectedRecord = {
             selectdId: outputRecord.Id,
             selectedName: outputRecord.Name
