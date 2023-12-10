@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="lightning Record form -to Create Record" icon-name="custom:custom34">
+        <lightning-record-form object-api-name={objectApiName} layout-type="full" columns="2">
+
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="lightning Record form -to view(can edit) Record" icon-name="custom:custom34">
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fieldsList} columns="2">
+
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="lightning Record form -to Edit Record" icon-name="custom:custom34">
+        <lightning-record-form record-id={recordId} mode="edit" object-api-name={objectApiName} layout-type="Compact"
+            columns="2">
+
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="lightning Record form -to readonly Record" icon-name="custom:custom34">
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fieldsList} columns="2"
+            mode="readonly">
+
+        </lightning-record-form>
+    </lightning-card>
+
+</template>

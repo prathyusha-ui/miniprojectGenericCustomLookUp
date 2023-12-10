@@ -4,8 +4,10 @@
             <lightning-layout-item>
                 <template lwc:if={wiredContacts.data}>
                     <template for:each={wiredContacts.data} for:item="contact">
+
                         <c-contactitem contact={contact} key={contact.Id}
                             onselection={childResponseSelectionHandler}></c-contactitem>
+
                     </template>
                 </template>
             </lightning-layout-item>
